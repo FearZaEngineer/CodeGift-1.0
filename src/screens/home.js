@@ -24,9 +24,10 @@ export function Home(props) {
   const [t, i18n] = useTranslation();
 
   const renderCard = ({item}) => {
-    
+   
     return (
       <TouchableOpacity
+      key={item._id}
         onPress={() => {
           props.navigation.navigate('offer', [
             item.titleAR,
@@ -61,21 +62,21 @@ export function Home(props) {
   const [ModalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-   async function bigBoy(){
+  async function bigBoy(){
     await HomeCatgories(res => {
       setCatgories([...catgories, ...res]);
     });
-   await  countries(res => {
+    await countries(res => {
       setMycountry(res);
     });
     await sliderImages(res => {
       const images = res.map(item => {
         return item.adsPath;
       });
-       setAdimages(images);
+     setAdimages(images);
        setLoading(false)
-    });
-   }
+      });
+    }
    bigBoy()
     return(
       setSlectedcountry(i18n.language == 'ar' ? 'السعودية' : 'Saudi')
@@ -84,7 +85,6 @@ export function Home(props) {
   }, []);
 
   const keys = item => {
-  
    return item._id
     
   };

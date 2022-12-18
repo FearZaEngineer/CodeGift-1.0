@@ -29,7 +29,7 @@ import {SliderBox} from 'react-native-image-slider-box';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-// import Clipboard from '@react-native-clipboard/clipboard';
+import Clipboard from '@react-native-clipboard/clipboard';
 import {useTranslation} from 'react-i18next';
 import {ScaledSheet} from 'react-native-size-matters';
 
@@ -148,7 +148,7 @@ export function CatPage(props) {
             <View style={styles.dview4}>
               <TouchableOpacity
                 onPress={() => {
-                  // Clipboard.setString(item.code);
+                  Clipboard.setString(item.code);
                   Alert.alert(null, t('تم النسخ'));
                 }}
                 style={styles.dibutton}>
@@ -234,6 +234,7 @@ export function CatPage(props) {
   function renderItems({item}) {
     return (
       <TouchableOpacity
+        key={item._id}
         onPress={() => {
           setOpenModul(true);
           setPressed(item);
