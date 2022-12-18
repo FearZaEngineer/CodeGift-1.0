@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "87978261999",
+    "project_id": "codegift-b3bbd",
+    "storage_bucket": "codegift-b3bbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87978261999:android:4f004cb146760490954a1a",
+        "android_client_info": {
+          "package_name": "com.codegifts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87978261999-lmi5jn6nr7o84qu968ofofujj18nbg61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJmnxIruL6Nu0E-XfcGidcEJH6-49bMCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87978261999-lmi5jn6nr7o84qu968ofofujj18nbg61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
